@@ -27,36 +27,32 @@
 </head>
 <body>
     <div id="info">
-        📸 Apunta la cámara a los marcadores<br>
-        🦅 Marcador 0 = Águila | 🦣 Marcador 1 = Mamut | 🐯 Marcador 2 = Tigre
+        📸 Apunta al marcador HIRO<br>
+        🦅 Águila | 🦣 Mamut | 🐯 Tigre
     </div>
 
     <a-scene embedded arjs>
         
-        <!-- MARCADOR 0: ÁGUILA -->
-        <a-marker type="barcode" value="0">
+        <a-marker preset="hiro">
+            <!-- ÁGUILA (izquierda) -->
             <a-entity
                 gltf-model="https://drive.google.com/uc?export=download&id=1gezZiSy5sfHX03-YKi1U7KOjOsqHV13_"
-                scale="1 1 1"
-                position="0 0 0">
+                scale="0.8 0.8 0.8"
+                position="-1.5 0 0">
             </a-entity>
-        </a-marker>
 
-        <!-- MARCADOR 1: MAMUT -->
-        <a-marker type="barcode" value="1">
+            <!-- MAMUT (centro) -->
             <a-entity
                 gltf-model="https://drive.google.com/uc?export=download&id=1RRHXBS5YqbAl0nqLUO75VCWcpxG2_Xae"
-                scale="1 1 1"
+                scale="0.8 0.8 0.8"
                 position="0 0 0">
             </a-entity>
-        </a-marker>
 
-        <!-- MARCADOR 2: TIGRE -->
-        <a-marker type="barcode" value="2">
+            <!-- TIGRE (derecha) -->
             <a-entity
                 gltf-model="https://drive.google.com/uc?export=download&id=1pSokyl4WhjPpMDull_XaRUHmivkcKhBv"
-                scale="1 1 1"
-                position="0 0 0">
+                scale="0.8 0.8 0.8"
+                position="1.5 0 0">
             </a-entity>
         </a-marker>
 
