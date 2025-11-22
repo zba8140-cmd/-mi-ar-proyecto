@@ -23,9 +23,24 @@
             padding: 15px;
             font-size: 14px;
         }
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial;
+            font-size: 18px;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
+    <div id="loading">⏳ Cargando modelos 3D...<br>Puede tardar unos segundos</div>
+    
     <div id="info">
         📸 Apunta al marcador HIRO<br>
         🦅 Águila | 🦣 Mamut | 🐯 Tigre
@@ -36,21 +51,21 @@
         <a-marker preset="hiro">
             <!-- ÁGUILA (izquierda) -->
             <a-entity
-                gltf-model="https://drive.google.com/uc?export=download&id=1gezZiSy5sfHX03-YKi1U7KOjOsqHV13_"
+                gltf-model="https://www.dropbox.com/scl/fi/nk82658dtwq5qwz1fulkb/aguila.glb?rlkey=s8h1i0nq7aqnnixaqybx36az1&st=csoyrvvt&dl=1"
                 scale="0.8 0.8 0.8"
                 position="-1.5 0 0">
             </a-entity>
 
             <!-- MAMUT (centro) -->
             <a-entity
-                gltf-model="https://drive.google.com/uc?export=download&id=1RRHXBS5YqbAl0nqLUO75VCWcpxG2_Xae"
+                gltf-model="https://www.dropbox.com/scl/fi/9qb5u997g4wggct5hf149/mamut.glb?rlkey=ppmnrxtpv4t8z36coaxw6xh3y&st=nr78ap6f&dl=1"
                 scale="0.8 0.8 0.8"
                 position="0 0 0">
             </a-entity>
 
             <!-- TIGRE (derecha) -->
             <a-entity
-                gltf-model="https://drive.google.com/uc?export=download&id=1pSokyl4WhjPpMDull_XaRUHmivkcKhBv"
+                gltf-model="https://www.dropbox.com/scl/fi/fff65beknowihdvf5mcn2/tigre.glb?rlkey=90qa5dvt0sdb5zt6f736afi6b&st=prdbq7i9&dl=1"
                 scale="0.8 0.8 0.8"
                 position="1.5 0 0">
             </a-entity>
@@ -58,6 +73,15 @@
 
         <a-entity camera></a-entity>
     </a-scene>
+
+    <script>
+        // Ocultar mensaje de carga
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 5000);
+        });
+    </script>
 
 </body>
 </html>
