@@ -49,13 +49,17 @@
     <!-- Escena de A-Frame con AR.js -->
     <a-scene
         embedded
-        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        vr-mode-ui="enabled: false"
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; trackingMethod: best;">
         
         <!-- Cámara -->
-        <a-entity camera></a-entity>
+        <a-entity camera look-controls="enabled: false"></a-entity>
 
         <!-- MARCADOR 1: ROCA -> ÁGUILA -->
         <a-marker type="pattern" url="roca.patt">
+            <!-- Cubo de prueba -->
+            <a-box position="0 0.5 0" material="color: yellow;" scale="0.3 0.3 0.3"></a-box>
+            
             <a-entity
                 gltf-model="https://drive.google.com/uc?export=download&id=1gezZiSy5sfHX03-YKi1U7KOjOsqHV13_"
                 scale="2 2 2"
@@ -68,7 +72,7 @@
         <a-marker type="pattern" url="hielo.patt">
             <a-entity
                 gltf-model="https://drive.google.com/uc?export=download&id=1RRHXBS5YqbAl0nqLUO75VCWcpxG2_Xae"
-                scale="0.5 0.5 0.5"
+                scale="2 2 2"
                 position="0 0 0"
                 rotation="0 0 0">
             </a-entity>
@@ -78,7 +82,7 @@
         <a-marker type="pattern" url="selva.patt">
             <a-entity
                 gltf-model="https://drive.google.com/uc?export=download&id=1pSokyl4WhjPpMDull_XaRUHmivkcKhBv"
-                scale="0.5 0.5 0.5"
+                scale="2 2 2"
                 position="0 0 0"
                 rotation="0 0 0">
             </a-entity>
