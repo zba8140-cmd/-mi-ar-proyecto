@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR - Mamut</title>
+    <title>AR - Animales Completo</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <style>
@@ -22,24 +22,47 @@
             background: rgba(0,0,0,0.8);
             padding: 15px;
             font-size: 14px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <div id="info">
-        📸 Apunta al marcador HIRO<br>
-        🦣 Mamut
+        📸 Apunta a cada marcador<br>
+        🦅 Marker ID 1 = Águila<br>
+        🐯 Marker ID 2 = Tigre<br>
+        🦣 HIRO = Mamut
     </div>
 
     <a-scene embedded arjs>
         
+        <!-- MARCADOR HIRO: MAMUT -->
         <a-marker preset="hiro">
-            <!-- SOLO MAMUT -->
             <a-entity
                 gltf-model="mamut1.glb"
                 scale="3 3 3"
                 position="0 0.5 0"
                 rotation="0 270 0">
+            </a-entity>
+        </a-marker>
+
+        <!-- MARCADOR ID 1: ÁGUILA -->
+        <a-marker type="barcode" value="1">
+            <a-entity
+                gltf-model="aguil.glb"
+                scale="2.5 2.5 2.5"
+                position="0 0.5 0"
+                rotation="0 180 0">
+            </a-entity>
+        </a-marker>
+
+        <!-- MARCADOR ID 2: TIGRE -->
+        <a-marker type="barcode" value="2">
+            <a-entity
+                gltf-model="aguil1.glb"
+                scale="2.5 2.5 2.5"
+                position="0 0.5 0"
+                rotation="0 180 0">
             </a-entity>
         </a-marker>
 
