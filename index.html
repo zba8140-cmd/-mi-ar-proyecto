@@ -39,7 +39,7 @@
     </style>
 </head>
 <body>
-    <div id="loading">⏳ Cargando modelos 3D...<br>Puede tardar unos segundos</div>
+    <div id="loading">⏳ Cargando modelos 3D...</div>
     
     <div id="info">
         📸 Apunta al marcador HIRO<br>
@@ -51,22 +51,22 @@
         <a-marker preset="hiro">
             <!-- ÁGUILA (izquierda) -->
             <a-entity
-                gltf-model="https://www.dropbox.com/scl/fi/nk82658dtwq5qwz1fulkb/aguila.glb?rlkey=s8h1i0nq7aqnnixaqybx36az1&st=csoyrvvt&dl=1"
-                scale="0.8 0.8 0.8"
+                gltf-model="aguil.glb"
+                scale="1 1 1"
                 position="-1.5 0 0">
             </a-entity>
 
-            <!-- MAMUT (centro) -->
+            <!-- ÁGUILA 2 o MAMUT? (centro) -->
             <a-entity
-                gltf-model="https://www.dropbox.com/scl/fi/9qb5u997g4wggct5hf149/mamut.glb?rlkey=ppmnrxtpv4t8z36coaxw6xh3y&st=nr78ap6f&dl=1"
-                scale="0.8 0.8 0.8"
+                gltf-model="aguil1.glb"
+                scale="1 1 1"
                 position="0 0 0">
             </a-entity>
 
-            <!-- TIGRE (derecha) -->
+            <!-- MAMUT (derecha) -->
             <a-entity
-                gltf-model="https://www.dropbox.com/scl/fi/fff65beknowihdvf5mcn2/tigre.glb?rlkey=90qa5dvt0sdb5zt6f736afi6b&st=prdbq7i9&dl=1"
-                scale="0.8 0.8 0.8"
+                gltf-model="mamut1.glb"
+                scale="1 1 1"
                 position="1.5 0 0">
             </a-entity>
         </a-marker>
@@ -75,12 +75,10 @@
     </a-scene>
 
     <script>
-        // Ocultar mensaje de carga
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loading').style.display = 'none';
-            }, 5000);
-        });
+        // Ocultar mensaje de carga después de 8 segundos
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+        }, 8000);
     </script>
 
 </body>
