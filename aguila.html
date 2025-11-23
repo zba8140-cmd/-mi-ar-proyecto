@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR - Águila</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+            color: white;
+            font-family: Arial;
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        🦅 ÁGUILA - Apunta al marcador HIRO
+    </div>
+
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-entity
+                gltf-model="aguil.glb"
+                scale="3 3 3"
+                position="0 0.5 0"
+                rotation="0 270 0">
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+
+</body>
+</html>
